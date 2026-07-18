@@ -30,6 +30,7 @@
         position: absolute;
         color: rgb(105, 181, 39);
         transition: ease 0.6s;
+        z-index: -1;
     }
     section:hover{
         border-radius: 27px;

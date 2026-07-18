@@ -1,5 +1,6 @@
 <script setup>
 import Header from './components/Header.vue';
+import SKInfo from './components/SK-info.vue';
 
 
 </script>
@@ -7,7 +8,7 @@ import Header from './components/Header.vue';
 <template>
 
   <Header/>
-
+  <SKInfo/>
 </template>
 
 <style scoped></style>
