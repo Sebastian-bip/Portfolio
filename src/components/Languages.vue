@@ -46,15 +46,11 @@ const languages = ref([
 section {
     display: flex;
     flex-direction: column;
-
     margin: auto;
     margin-top: 2rem;
-
     width: 80%;
     max-width: 1100px;
-
     padding: 2rem;
-
     background: #3f3f3f;
     border-radius: 16px;
 }
@@ -69,11 +65,9 @@ h2 {
 
 ul {
     list-style: none;
-
     display: flex;
     flex-wrap: wrap;
     gap: .8rem;
-
     padding: 0;
     margin-top: 1.5rem;
 }
@@ -81,18 +75,13 @@ li {
     display: flex;
     align-items: center;
     gap: .6rem;
-
     padding: .45rem .9rem;
-
     background: #2b2b2b;
     color: white;
-
     border: 1px solid #42b883;
     border-radius: 999px;
-
     font-size: .9rem;
     font-weight: 500;
-
     transition: .2s ease;
 }
 
