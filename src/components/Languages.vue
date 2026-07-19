@@ -13,9 +13,11 @@ import reactIcon from '@/assets/icons/react.svg'
 import vueIcon from '@/assets/icons/vue.svg'
 import mlIcon from '@/assets/icons/ai.svg'
 import gitIcon from '@/assets/icons/git.svg'
+import nextIcon from '@/assets/icons/next.svg'
+
 
 const languages = ref([
-    { id: 1, name: "JavaScript", icon: jsIcon, level: "Średnio zaawansowany", color: "#F7DF1E" },
+    { id: 13, name: "JavaScript", icon: jsIcon, level: "Średnio zaawansowany", color: "#F7DF1E" },
     { id: 2, name: "Python", icon: pythonIcon, level: "Średnio zaawansowany", color: "#306998" },
     { id: 3, name: "C++", icon: cppIcon, level: "Podstawy", color: "#00599C" },
     { id: 4, name: "C#", icon: csharpIcon, level: "Podstawy", color: "#8957E5" },
@@ -27,6 +29,8 @@ const languages = ref([
     { id: 10, name: "Vue", icon: vueIcon, level: "Średnio zaawansowany", color: "#42B883" },
     { id: 11, name: "Machine Learning", icon: mlIcon, level: "Podstawy", color: "#EC4899" },
     { id: 12, name: "Git", icon: gitIcon, level: "Dobry", color: "#F05033" },
+    { id: 1, name: "Next.js", icon: nextIcon, level: "Mało zawansowany", color: "#202021" }
+
 ])
 
 function getTextColor(hex) {
