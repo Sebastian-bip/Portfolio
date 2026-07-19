@@ -1,31 +1,40 @@
 <script setup>
 import { ref } from 'vue'
 
+import exampleImage from '@/assets/PrzykladZD.jpg'
+
 const projects = ref([
     {
         id: 1,
         title: "Portfolio",
-        description: "Moje portfolio, stworzyłem to w vue, mój pierwszy projekt w tym frameworku który potraktowałem poważnie.",
-        link: "https://github.com/Sebastian-bip/Portfolio"
+        description: "Moje portfolio, stworzyłem to w Vue, mój pierwszy projekt w tym frameworku który potraktowałem poważnie.",
+        github: "https://github.com/Sebastian-bip/Portfolio",
+        demo: "https://portfolio-nine-beige-l3h2pmm3nm.vercel.app",
+        image: exampleImage
     },
     {
         id: 2,
         title: "Strona szkoły",
-        description: "Pracowałem z kolegą nad nową stroną naszej szkoły, byłem odpowiedzialny z back-end, stworzyłem API, dużą strukturę bazy danych SQL. Byłem w większej części odpowiedizalny za projekt oraz produkcje. Strona nie dostała furtki od dyreki więc jest to projekt porzucony.",
-        link: "https://github.com/Sebastian-bip/ZST_StronaTestowa"
+        description: "Pracowałem z kolegą nad nową stroną naszej szkoły, byłem odpowiedzialny z back-end, stworzyłem API, dużą strukturę bazy danych SQL. Byłem w większej części odpowiedizalny za projekt oraz produkcje. Strona nie dostała furtki od dyreki więc jest to projekt porzucony. Strona była wykonywana w Next.js",
+        github: "https://github.com/Sebastian-bip/ZST_StronaTestowa",
+        demo: "https://zst-strona-testowa.vercel.app/data-base-test",
+        image: exampleImage
     },
     {
         id: 3,
         title: "Strona Matematyczna",
         description: "Pierwszy poważny projekt wykorzystujący moją znajomość HTMLa oraz CSS który jest moją największą dumą. Strona służy do generowania zadań matematycznych na poziomie 3-klasy szkoły podstawowej z różnymi poziomami trudności",
-        link: "https://github.com/KarasuXYZ/Fina-Projekt"
-        // https://karasuxyz.github.io/Fina-Projekt/
+        github: "https://github.com/KarasuXYZ/Fina-Projekt",
+        demo: "https://karasuxyz.github.io/Fina-Projekt/",
+        image: exampleImage
     },
     {
         id: 4,
         title: "Prosty Quizz",
         description: "Interakwyna strona internetowa z podstawowymi pytaniami z zakresu IT stworzona na dni otwarte w mojej uwczesnej szkole. Projekt bazujący na Javascrypcie",
-        link: "https://github.com/KarasuXYZ/Quizz"
+        github: "https://github.com/KarasuXYZ/Quizz",
+        demo: "https://karasuxyz.github.io/Quizz/",
+        image: exampleImage
     }
 ])
 </script>
@@ -34,16 +43,38 @@ const projects = ref([
     <section class="projects">
         <h2>Moje projekty</h2>
 
-        <div v-for="project in projects" :key="project.id" class="project">
-            <div class="info">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            </div>
+        <div class="projects-grid">
+    <div
+        v-for="project in projects"
+        :key="project.id"
+        class="project-card"
+    >
+        <img
+            :src="project.image"
+            :alt="project.title"
+            class="project-image"
+        >
 
-            <a :href="project.link" target="_blank" rel="noopener noreferrer">
-                Otwórz projekt ↗
+        <div class="info">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+        </div>
+
+        <div class="buttons">
+            <a :href="project.github" target="_blank">
+                GitHub
+            </a>
+
+            <a
+                v-if="project.demo"
+                :href="project.demo"
+                target="_blank"
+            >
+                Demo
             </a>
         </div>
+    </div>
+</div>
     </section>
 </template>
 
@@ -63,28 +94,6 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: .5px;
-}
-
-section>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    transition: .25s ease;
-}
-
-section>div:first-of-type {
-    border-top: none;
-}
-
-section>div:hover {
-    transform: translateX(6px);
-}
-
-section>div>div {
-    flex: 1;
 }
 
 h3 {
@@ -116,20 +125,56 @@ a:hover {
     background: #42b883;
     color: #222;
 }
-
-@media (max-width: 768px) {
-    section {
-        padding: 1.5rem;
-    }
-
-    section>div {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    a {
-        width: fit-content;
-    }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    background: #2f2f2f;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition: .25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    background: #444;
+}
+.info {
+    padding: 1.5rem;
+    flex: 1;
+}
+.buttons {
+    display: flex;
+    gap: 1rem;
+
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.buttons a {
+    flex: 1;
+    text-align: center;
+}
+@media (max-width: 800px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 </style>
