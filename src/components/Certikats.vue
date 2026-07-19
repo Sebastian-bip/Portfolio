@@ -6,7 +6,7 @@ const projects = ref([
         id: 1,
         title: "Portfolio",
         description: "Moje portfolio, stworzyłem to w vue, mój pierwszy projekt w tym frameworku który potraktowałem poważnie.",
-        link: "https://github.com/twoj-login/portfolio"
+        link: "https://github.com/Sebastian-bip/Portfolio"
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const projects = ref([
         id: 4,
         title: "Prosty Quizz",
         description: "Interakwyna strona internetowa z podstawowymi pytaniami z zakresu IT stworzona na dni otwarte w mojej uwczesnej szkole. Projekt bazujący na Javascrypcie",
-        link: "https://github.com/twoj-login/library-system"
+        link: "https://github.com/KarasuXYZ/Quizz"
     }
 ])
 </script>
