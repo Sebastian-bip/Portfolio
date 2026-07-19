@@ -5,20 +5,27 @@ const projects = ref([
     {
         id: 1,
         title: "Portfolio",
-        description: "Moje portfolio stworzone w Vue 3 prezentujące umiejętności, projekty i doświadczenie.",
+        description: "Moje portfolio, stworzyłem to w vue, mój pierwszy projekt w tym frameworku który potraktowałem poważnie.",
         link: "https://github.com/twoj-login/portfolio"
     },
     {
         id: 2,
-        title: "System zarządzania biblioteką",
-        description: "Aplikacja do zarządzania książkami, użytkownikami oraz wypożyczeniami.",
-        link: "https://github.com/twoj-login/library-system"
+        title: "Strona szkoły",
+        description: "Pracowałem z kolegą nad nową stroną naszej szkoły, byłem odpowiedzialny z back-end, stworzyłem API, dużą strukturę bazy danych SQL. Byłem w większej części odpowiedizalny za projekt oraz produkcje. Strona nie dostała furtki od dyreki więc jest to projekt porzucony.",
+        link: "https://github.com/Sebastian-bip/ZST_StronaTestowa"
     },
     {
         id: 3,
-        title: "Aplikacja AI",
-        description: "Projekt wykorzystujący modele Machine Learning do analizy danych.",
-        link: "https://github.com/twoj-login/ai-project"
+        title: "Strona Matematyczna",
+        description: "Pierwszy poważny projekt wykorzystujący moją znajomość HTMLa oraz CSS który jest moją największą dumą. Strona służy do generowania zadań matematycznych na poziomie 3-klasy szkoły podstawowej z różnymi poziomami trudności",
+        link: "https://github.com/KarasuXYZ/Fina-Projekt"
+        // https://karasuxyz.github.io/Fina-Projekt/
+    },
+    {
+        id: 4,
+        title: "Prosty Quizz",
+        description: "Interakwyna strona internetowa z podstawowymi pytaniami z zakresu IT stworzona na dni otwarte w mojej uwczesnej szkole. Projekt bazujący na Javascrypcie",
+        link: "https://github.com/twoj-login/library-system"
     }
 ])
 </script>

@@ -12,6 +12,7 @@ import cssIcon from '@/assets/icons/css.svg'
 import reactIcon from '@/assets/icons/react.svg'
 import vueIcon from '@/assets/icons/vue.svg'
 import mlIcon from '@/assets/icons/ai.svg'
+import gitIcon from '@/assets/icons/git.svg'
 
 //{id: ,name: , level: ,} template
 const languages = ref([
@@ -26,6 +27,7 @@ const languages = ref([
     { id: 9, name: "React", icon: reactIcon, level: "Podstawy" },
     { id: 10, name: "Vue", icon: vueIcon, level: "Średnio zaawansowany" },
     { id: 11, name: "Machine Learning", icon: mlIcon, level: "Podstawy" },
+    { id: 12, name: "Git", icon: gitIcon, level: "Dobry"}
 ])
 </script>
 <template>
