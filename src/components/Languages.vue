@@ -14,27 +14,40 @@ import vueIcon from '@/assets/icons/vue.svg'
 import mlIcon from '@/assets/icons/ai.svg'
 import gitIcon from '@/assets/icons/git.svg'
 
-//{id: ,name: , level: ,} template
 const languages = ref([
-    { id: 1, name: "JavaScript", icon: jsIcon, level: "Średnio zaawansowany" },
-    { id: 2, name: "Python", icon: pythonIcon, level: "Średnio zaawansowany" },
-    { id: 3, name: "C++", icon: cppIcon, level: "Podstawy" },
-    { id: 4, name: "C#", icon: csharpIcon, level: "Podstawy" },
-    { id: 5, name: "PHP", icon: phpIcon, level: "Podstawy" },
-    { id: 6, name: "SQL", icon: sqlIcon, level: "Średnio zaawansowany" },
-    { id: 7, name: "HTML", icon: htmlIcon, level: "Zaawansowany" },
-    { id: 8, name: "CSS", icon: cssIcon, level: "Średnio zaawansowany" },
-    { id: 9, name: "React", icon: reactIcon, level: "Podstawy" },
-    { id: 10, name: "Vue", icon: vueIcon, level: "Średnio zaawansowany" },
-    { id: 11, name: "Machine Learning", icon: mlIcon, level: "Podstawy" },
-    { id: 12, name: "Git", icon: gitIcon, level: "Dobry"}
+    { id: 1, name: "JavaScript", icon: jsIcon, level: "Średnio zaawansowany", color: "#F7DF1E" },
+    { id: 2, name: "Python", icon: pythonIcon, level: "Średnio zaawansowany", color: "#306998" },
+    { id: 3, name: "C++", icon: cppIcon, level: "Podstawy", color: "#00599C" },
+    { id: 4, name: "C#", icon: csharpIcon, level: "Podstawy", color: "#8957E5" },
+    { id: 5, name: "PHP", icon: phpIcon, level: "Podstawy", color: "#C7A6FF" },
+    { id: 6, name: "SQL", icon: sqlIcon, level: "Średnio zaawansowany", color: "#1B9E86" },
+    { id: 7, name: "HTML", icon: htmlIcon, level: "Zaawansowany", color: "#E34F26" },
+    { id: 8, name: "CSS", icon: cssIcon, level: "Średnio zaawansowany", color: "#264DE4" },
+    { id: 9, name: "React", icon: reactIcon, level: "Podstawy", color: "#61DAFB" },
+    { id: 10, name: "Vue", icon: vueIcon, level: "Średnio zaawansowany", color: "#42B883" },
+    { id: 11, name: "Machine Learning", icon: mlIcon, level: "Podstawy", color: "#EC4899" },
+    { id: 12, name: "Git", icon: gitIcon, level: "Dobry", color: "#F05033" },
 ])
+
+function getTextColor(hex) {
+    const clean = hex.replace('#', '')
+    const r = parseInt(clean.substring(0, 2), 16)
+    const g = parseInt(clean.substring(2, 4), 16)
+    const b = parseInt(clean.substring(4, 6), 16)
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000
+    return brightness > 150 ? '#111111' : '#ffffff'
+}
 </script>
+
 <template>
     <section>
         <h2>Technologie i języki, z których korzystam</h2>
         <ul>
-            <li v-for="lang in languages" :key="lang.id">
+            <li
+                v-for="lang in languages"
+                :key="lang.id"
+                :style="{ '--hover-color': lang.color, '--hover-text': getTextColor(lang.color) }"
+            >
                 <img :src="lang.icon" :alt="lang.name" class="icon" />
                 <div class="content">
                     <span class="name">{{ lang.name }}</span>
@@ -44,6 +57,7 @@ const languages = ref([
         </ul>
     </section>
 </template>
+
 <style scoped>
 section {
     display: flex;
@@ -73,6 +87,7 @@ ul {
     padding: 0;
     margin-top: 1.5rem;
 }
+
 li {
     display: flex;
     align-items: center;
@@ -84,13 +99,29 @@ li {
     border-radius: 999px;
     font-size: .9rem;
     font-weight: 500;
-    transition: .2s ease;
+    transform: translateY(0) scale(1);
+    transition: transform .3s ease;
 }
 
 li:hover {
-    background: #42b883;
-    color: #1f1f1f;
-    transform: translateY(-2px);
+    animation: highlight .8s ease forwards;
+    transform: translateY(-4px) scale(1.06);
+    cursor: none;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: #2b2b2b;
+        color: white;
+    }
+    25% {
+        background-color: #7a7a7a;
+        color: white;
+    }
+    100% {
+        background-color: var(--hover-color);
+        color: var(--hover-text);
+    }
 }
 
 .icon {

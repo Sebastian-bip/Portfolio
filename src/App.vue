@@ -10,7 +10,7 @@ import Footer from './components/Footer.vue';
 
 <template>
 
-  <Header/>
+ <!-- <Header/> element musiał zostać wycięty --> 
   <SKInfo/>
   <Languages/>
   <Certikats/>

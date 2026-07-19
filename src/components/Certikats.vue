@@ -2,6 +2,9 @@
 import { ref } from 'vue'
 
 import exampleImage from '@/assets/PrzykladZD.jpg'
+import QuizzImage from '@/assets/Quizzdemo.jpg'
+import MatmaImage from '@/assets/Matmademo.jpg'
+import ZSTimage from '@/assets/ZSTdemo.jpg'
 
 const projects = ref([
     {
@@ -18,7 +21,7 @@ const projects = ref([
         description: "Pracowałem z kolegą nad nową stroną naszej szkoły, byłem odpowiedzialny z back-end, stworzyłem API, dużą strukturę bazy danych SQL. Byłem w większej części odpowiedizalny za projekt oraz produkcje. Strona nie dostała furtki od dyreki więc jest to projekt porzucony. Strona była wykonywana w Next.js",
         github: "https://github.com/Sebastian-bip/ZST_StronaTestowa",
         demo: "https://zst-strona-testowa.vercel.app/data-base-test",
-        image: exampleImage
+        image: ZSTimage
     },
     {
         id: 3,
@@ -26,7 +29,7 @@ const projects = ref([
         description: "Pierwszy poważny projekt wykorzystujący moją znajomość HTMLa oraz CSS który jest moją największą dumą. Strona służy do generowania zadań matematycznych na poziomie 3-klasy szkoły podstawowej z różnymi poziomami trudności",
         github: "https://github.com/KarasuXYZ/Fina-Projekt",
         demo: "https://karasuxyz.github.io/Fina-Projekt/",
-        image: exampleImage
+        image: MatmaImage
     },
     {
         id: 4,
@@ -34,7 +37,7 @@ const projects = ref([
         description: "Interakwyna strona internetowa z podstawowymi pytaniami z zakresu IT stworzona na dni otwarte w mojej uwczesnej szkole. Projekt bazujący na Javascrypcie",
         github: "https://github.com/KarasuXYZ/Quizz",
         demo: "https://karasuxyz.github.io/Quizz/",
-        image: exampleImage
+        image: QuizzImage
     }
 ])
 </script>
