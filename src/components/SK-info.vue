@@ -27,7 +27,7 @@ const socials = [
     { name: "GitHub", url: "https://github.com/Sebastian-bip" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/sebastian-kramarz-05b14036b/" },
     { name: "Instagram", url: "https://www.instagram.com/sebastan.jpg/" },
-    { name: "Steam", url: "https://steamcommunity.com/profiles/76561198054421299/" },
+   // { name: "Steam", url: "https://steamcommunity.com/profiles/76561198054421299/" },
 ]
 </script>
 
