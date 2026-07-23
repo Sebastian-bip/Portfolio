@@ -19,7 +19,7 @@ const projects = ref([
     {
         id: 1,
         title: "Portfolio",
-        description: "Moje portfolio, stworzyłem to w Vue, mój pierwszy projekt w tym frameworku który potraktowałem poważnie.",
+        description: "Moje portfolio które rozwiązuje problem z moim brakiem portfolio. Strona jest responsywna napisałem ja w vue, strona jest hostowana przez Vercel i jest świetnym przykładem mojej pracy. W sam raz dla potebncjalnych pracodawców.",
         github: "https://github.com/Sebastian-bip/Portfolio",
         demo: "https://portfolio-nine-beige-l3h2pmm3nm.vercel.app",
         image: exampleImage
