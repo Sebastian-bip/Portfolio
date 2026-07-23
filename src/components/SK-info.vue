@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue"
 
-const photo = "/ZdjęcieCV.png"
+const photo = "/ZdjęcieCV.jpg"
 
 const name = "Sebastian Kramarz"
 const role = "Junior Front-End Developer"
