@@ -14,22 +14,25 @@ import vueIcon from '@/assets/icons/vue.svg'
 import mlIcon from '@/assets/icons/ai.svg'
 import gitIcon from '@/assets/icons/git.svg'
 import nextIcon from '@/assets/icons/next.svg'
+import tailwindIcon from '@/assets/icons/tailwind.svg'
 
 
 const languages = ref([
     { id: 13, name: "JavaScript", icon: jsIcon, level: "Średnio zaawansowany", color: "#F7DF1E" },
+    { id: 9, name: "React", icon: reactIcon, level: "Podstawy", color: "#61DAFB" },
+    { id: 14, name: "Tailwind CSS", icon: tailwindIcon, level: "Początkujący", color: "#20B3E8" },
     { id: 2, name: "Python", icon: pythonIcon, level: "Średnio zaawansowany", color: "#306998" },
     { id: 3, name: "C++", icon: cppIcon, level: "Podstawy", color: "#00599C" },
     { id: 4, name: "C#", icon: csharpIcon, level: "Podstawy", color: "#8957E5" },
     { id: 5, name: "PHP", icon: phpIcon, level: "Podstawy", color: "#C7A6FF" },
     { id: 6, name: "SQL", icon: sqlIcon, level: "Średnio zaawansowany", color: "#1B9E86" },
     { id: 7, name: "HTML", icon: htmlIcon, level: "Zaawansowany", color: "#E34F26" },
-    { id: 8, name: "CSS", icon: cssIcon, level: "Średnio zaawansowany", color: "#264DE4" },
-    { id: 9, name: "React", icon: reactIcon, level: "Podstawy", color: "#61DAFB" },
+    { id: 8, name: "CSS", icon: cssIcon, level: "zaawansowany", color: "#264DE4" },
     { id: 10, name: "Vue", icon: vueIcon, level: "Średnio zaawansowany", color: "#42B883" },
     { id: 11, name: "Machine Learning", icon: mlIcon, level: "Podstawy", color: "#EC4899" },
     { id: 12, name: "Git", icon: gitIcon, level: "Dobry", color: "#F05033" },
     { id: 1, name: "Next.js", icon: nextIcon, level: "Mało zawansowany", color: "#202021" }
+
 
 ])
 
@@ -47,11 +50,8 @@ function getTextColor(hex) {
     <section>
         <h2>Technologie i języki, z których korzystam</h2>
         <ul>
-            <li
-                v-for="lang in languages"
-                :key="lang.id"
-                :style="{ '--hover-color': lang.color, '--hover-text': getTextColor(lang.color) }"
-            >
+            <li v-for="lang in languages" :key="lang.id"
+                :style="{ '--hover-color': lang.color, '--hover-text': getTextColor(lang.color) }">
                 <img :src="lang.icon" :alt="lang.name" class="icon" />
                 <div class="content">
                     <span class="name">{{ lang.name }}</span>
@@ -73,6 +73,7 @@ section {
     padding: 2rem;
     background: #3f3f3f;
     border-radius: 16px;
+    font-family: 'Inter', sans-serif;
 }
 
 h2 {
@@ -81,6 +82,7 @@ h2 {
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: .5px;
+    font-family: 'Geist', sans-serif;
 }
 
 ul {
@@ -118,10 +120,12 @@ li:hover {
         background-color: #2b2b2b;
         color: white;
     }
+
     25% {
         background-color: #7a7a7a;
         color: white;
     }
+
     100% {
         background-color: var(--hover-color);
         color: var(--hover-text);

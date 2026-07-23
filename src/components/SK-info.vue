@@ -75,6 +75,7 @@ section {
     background: #3a3a3a;
     border-radius: 18px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    font-family: 'Inter', sans-serif;
 }
 
 .photo {
@@ -95,6 +96,7 @@ h1 {
     margin: 0;
     color: white;
     font-size: 2.4rem;
+    font-family: 'Geist', sans-serif;
 }
 
 h2 {
@@ -102,6 +104,7 @@ h2 {
     color: #42b883;
     font-size: 1.2rem;
     font-weight: 600;
+    font-family: 'Geist', sans-serif;
 }
 
 .about {

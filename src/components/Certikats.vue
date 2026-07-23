@@ -5,8 +5,17 @@ import exampleImage from '@/assets/PrzykladZD.jpg'
 import QuizzImage from '@/assets/Quizzdemo.jpg'
 import MatmaImage from '@/assets/Matmademo.jpg'
 import ZSTimage from '@/assets/ZSTdemo.jpg'
+import FilmFinderImage from '@/assets/FilmFinder.png'
 
 const projects = ref([
+    {
+        id: 5,
+        title: "Wyszukiwarka Filmów",
+        description: "Aplikacja internetowa napisana w Vue, wykorzystująca API TMDB do wyszukiwania filmów. Projekt powstał w ramach nauki Vue oraz Tailwind CSS i jest moim pierwszym projektem w tych frameworkach.",
+        github: "https://github.com/Sebastian-bip/Film-Finder",
+        demo: "https://film-finder-tau-brown.vercel.app",
+        image: FilmFinderImage
+    },
     {
         id: 1,
         title: "Portfolio",
@@ -89,6 +98,7 @@ section {
     background: #3a3a3a;
     border-radius: 18px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    font-family: 'Inter', sans-serif;
 }
 
 h2 {
@@ -97,6 +107,7 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: .5px;
+    font-family: 'Geist', sans-serif;
 }
 
 h3 {
@@ -104,6 +115,7 @@ h3 {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
+    font-family: 'Geist', sans-serif;
 }
 
 p {
