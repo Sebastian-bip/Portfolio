@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root { color-scheme: dark; font-family: 'Manrope', sans-serif; background: #101011; color: #f5f3ef; }
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #101011; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #101011; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+#app { min-height: 100vh; }
+.app-shell { min-height: 100vh; background: radial-gradient(circle at 76% -16%, #3b272a 0, transparent 31rem), radial-gradient(circle at -10% 30%, #22252b 0, transparent 27rem), #101011; }
+.site-container { width: min(100% - 48px, 1440px); margin-inline: auto; }
+.eyebrow { color: #e88972; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.display { letter-spacing: -.065em; line-height: .98; }
+.surface { border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.045); box-shadow: 0 18px 60px rgba(0,0,0,.18); }
+.icon-button { display:grid; width:42px; height:42px; place-items:center; border:1px solid rgba(255,255,255,.11); border-radius:14px; color:#d7d4cf; background:rgba(255,255,255,.04); transition:transform .18s ease, background .18s ease, border-color .18s ease; }
+.icon-button:hover { transform:translateY(-2px); color:#fff; background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.25); }
+.icon-button:active { transform:translateY(0) scale(.96); }
+.icon-button:focus-visible, .primary-button:focus-visible, .nav-link:focus-visible, input:focus-visible { outline:2px solid #e88972; outline-offset:3px; }
+.primary-button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 20px; border:0; border-radius:16px; color:#1a1211; background:#f09279; font-weight:800; transition:transform .18s ease, box-shadow .18s ease, background .18s ease; box-shadow:0 8px 22px rgba(232,137,114,.18); }
+.primary-button:hover { background:#f7a18a; transform:translateY(-2px); box-shadow:0 12px 28px rgba(232,137,114,.28); }
+.primary-button:active { transform:translateY(0) scale(.98); }
+
+/* Light mode keeps the same editorial character, with paper-like surfaces instead of inverted dark UI. */
+html:not(.dark) { color-scheme: light; background: #f3f1ed; color: #211f1d; }
+html:not(.dark) body { background: #f3f1ed; }
+html:not(.dark) .app-shell { background: radial-gradient(circle at 78% -12%, #f2d7cf 0, transparent 31rem), radial-gradient(circle at -10% 32%, #d9e0df 0, transparent 27rem), #f3f1ed; }
+html:not(.dark) header { background: rgba(243,241,237,.86) !important; border-color: rgba(31,29,27,.1) !important; }
+html:not(.dark) .surface { background: rgba(255,255,255,.62); border-color: rgba(31,29,27,.1); box-shadow: 0 18px 50px rgba(50,39,33,.08); }
+html:not(.dark) .text-white, html:not(.dark) .text-\[\#f5f3ef\], html:not(.dark) .text-\[\#f2f0ec\] { color: #211f1d !important; }
+html:not(.dark) .text-\[\#a9a7a4\], html:not(.dark) .text-\[\#aaa8a5\], html:not(.dark) .text-\[\#999795\], html:not(.dark) .text-\[\#8d8b88\], html:not(.dark) .text-\[\#777572\] { color: #706b65 !important; }
+html:not(.dark) .bg-white\/\[\.035\], html:not(.dark) .bg-white\/5 { background-color: rgba(40,35,31,.045) !important; }
+html:not(.dark) .border-white\/8, html:not(.dark) .border-white\/7, html:not(.dark) .border-white\/10, html:not(.dark) .border-white\/12 { border-color: rgba(40,35,31,.12) !important; }
+html:not(.dark) .icon-button { color: #554f49; border-color: rgba(40,35,31,.13); background: rgba(255,255,255,.65); }
+html:not(.dark) .icon-button:hover { color: #211f1d; background: #fff; }
+html:not(.dark) .search-shell input { color: #211f1d; }
+html:not(.dark) .search-shell input::placeholder { color: #8b8580; }
+html:not(.dark) .movie-card img { box-shadow: 0 12px 26px rgba(41,31,25,.16); }
+html:not(.dark) footer { border-color: rgba(40,35,31,.12) !important; }
+@media (max-width: 640px) { .site-container { width:min(100% - 32px, 1440px); } }
